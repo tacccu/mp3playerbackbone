@@ -1,4 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <songs>
-    
+    <song id="1">
+        <title>Hells Bells</title>
+        <genre>Rock</genre>
+        <artist>AC/DC</artist>
+        <album>Back in Black</album>
+        <time>311</time>
+        <ruta>audios/hells_bells.mp3</ruta>
+    </song>    
+    <song id="2">
+        <title>Have a drink on me</title>
+        <genre>Rock</genre>
+        <artist>AC/DC</artist>
+        <album>Back in Black</album>
+        <time>238</time>
+        <ruta>audios/have_a_drink_on_me.mp3</ruta>
+    </song>   
+    <song id="3">
+        <title>Shake A Leg</title>
+        <genre>Rock</genre>
+        <artist>AC/DC</artist>
+        <album>Back in Black</album>
+        <time>245</time>
+        <ruta>audios/shake_a_leg.mp3</ruta>
+    </song>   
+    <song id="4">
+        <title>Shoot To Thrill</title>
+        <genre>Rock</genre>
+        <artist>AC/DC</artist>
+        <album>Back in Black</album>
+        <time>320</time>
+        <ruta>audios/shoot_to_thrill.mp3</ruta>
+    </song>   
 </songs>
+<playlists>
+    <playlist>
+        <name>All Songs</name>
+        <songs>
+            <song id="1"/>
+            <song id="2"/>
+            <song id="3"/>
+            <song id="4"/>
+        </songs>
+    </playlist>
+    <playlist>
+        <name>Other Playlist</name>
+    </playlist>
+</playlists>
