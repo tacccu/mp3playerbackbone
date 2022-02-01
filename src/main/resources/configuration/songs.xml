@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<songs>
-    <song id="1">
-        <title>Hells Bells</title>
-        <genre>Rock</genre>
-        <artist>AC/DC</artist>
-        <album>Back in Black</album>
-        <time>311</time>
-        <ruta>audios/hells_bells.mp3</ruta>
-    </song>    
-    <song id="2">
-        <title>Have a drink on me</title>
-        <genre>Rock</genre>
-        <artist>AC/DC</artist>
-        <album>Back in Black</album>
-        <time>238</time>
-        <ruta>audios/have_a_drink_on_me.mp3</ruta>
-    </song>   
-    <song id="3">
-        <title>Shake A Leg</title>
-        <genre>Rock</genre>
-        <artist>AC/DC</artist>
-        <album>Back in Black</album>
-        <time>245</time>
-        <ruta>audios/shake_a_leg.mp3</ruta>
-    </song>   
-    <song id="4">
-        <title>Shoot To Thrill</title>
-        <genre>Rock</genre>
-        <artist>AC/DC</artist>
-        <album>Back in Black</album>
-        <time>320</time>
-        <ruta>audios/shoot_to_thrill.mp3</ruta>
-    </song>   
-</songs>
-<playlists>
-    <playlist id="1">
-        <path>configuration/playlist_all_songs.json</path>
-    </playlist>
-    <playlist id="2">
-        <path>configuration/playlist_other_songs.json</path>
-    </playlist>
-</playlists>
+<reproductor>
+    <songs>
+        <song id="1">
+            <title>Hells Bells</title>
+            <genre>Rock</genre>
+            <artist>AC/DC</artist>
+            <album>Back in Black</album>
+            <time>311</time>
+            <ruta>audios/hells_bells.mp3</ruta>
+        </song>    
+        <song id="2">
+            <title>Have a drink on me</title>
+            <genre>Rock</genre>
+            <artist>AC/DC</artist>
+            <album>Back in Black</album>
+            <time>238</time>
+            <ruta>audios/have_a_drink_on_me.mp3</ruta>
+        </song>   
+        <song id="3">
+            <title>Shake A Leg</title>
+            <genre>Rock</genre>
+            <artist>AC/DC</artist>
+            <album>Back in Black</album>
+            <time>245</time>
+            <ruta>audios/shake_a_leg.mp3</ruta>
+        </song>   
+        <song id="4">
+            <title>Shoot To Thrill</title>
+            <genre>Rock</genre>
+            <artist>AC/DC</artist>
+            <album>Back in Black</album>
+            <time>320</time>
+            <ruta>audios/shoot_to_thrill.mp3</ruta>
+        </song>
+    </songs>
+    <paylists>
+        <playlist>
+            <title>All Songs</title>
+            <path>configuration/playlist_all_songs.json</path>
+        </playlist>
+        <playlist>
+            <title>Other Songs</title>
+            <path>configuration/playlist_other_songs.json</path>
+        </playlist>   
+    </paylists>
+</reproductor>
