@@ -34,16 +34,10 @@
     </song>   
 </songs>
 <playlists>
-    <playlist>
-        <name>All Songs</name>
-        <songs>
-            <song id="1"/>
-            <song id="2"/>
-            <song id="3"/>
-            <song id="4"/>
-        </songs>
+    <playlist id="1">
+        <path>configuration/playlist_all_songs.json</path>
     </playlist>
-    <playlist>
-        <name>Other Playlist</name>
+    <playlist id="2">
+        <path>configuration/playlist_other_songs.json</path>
     </playlist>
 </playlists>
