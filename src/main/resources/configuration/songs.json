@@ -1,0 +1,38 @@
+[
+	{
+                "id": 1,
+		"title": "Hells Bells",
+                "genre":"Rock",
+                "artist":"AC/DC",
+                "album":"Back in Black",
+                "time":311,
+                "songPath":"audios/hells_bells.mp3"
+	},
+	{
+                "id": 2,
+		"title": "Have a drink on me",
+                "genre":"Rock",
+                "artist":"AC/DC",
+                "album":"Back in Black",
+                "time":238,
+                "songPath":"audios/have_a_drink_on_me.mp3"
+	},
+        {
+                "id": 3,
+		"title": "Shake A Leg",
+                "genre":"Rock",
+                "artist":"AC/DC",
+                "album":"Back in Black",
+                "time":245,
+                "songPath":"audios/shake_a_leg.mp3"
+	},
+        {
+                "id": 4,
+		"title": "Shoot To Thrill",
+                "genre":"Rock",
+                "artist":"AC/DC",
+                "album":"Back in Black",
+                "time":320,
+                "songPath":"audios/shoot_to_thrill.mp3"
+	}
+]
