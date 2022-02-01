@@ -1,0 +1,35 @@
+/* 
+    Author     : Cristòfol-Lluís Thwaite
+*/
+
+.padding-10 {
+    -fx-padding: 10px;
+}
+
+#playListsTitle {
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-padding: 10px;
+}
+
+#currentTitle {
+    -fx-font-weight: bold;
+    -fx-font-size: 10pt;
+}
+
+#currentArtist {
+    -fx-font-style: italic;
+    -fx-font-size: 8pt;
+}
+
+#slider {
+    -fx-padding: 20px;
+}
+
+.button {
+    -fx-alignment: center;
+}
+
+.glyph-icon {
+    -fx-fill: #666666;
+}
