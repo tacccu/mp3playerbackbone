@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <reproductor>
     <songs>
-        <song id="1">
+        <song>
             <title>Hells Bells</title>
             <genre>Rock</genre>
             <artist>AC/DC</artist>
@@ -9,7 +9,7 @@
             <time>311</time>
             <ruta>audios/hells_bells.mp3</ruta>
         </song>    
-        <song id="2">
+        <song>
             <title>Have a drink on me</title>
             <genre>Rock</genre>
             <artist>AC/DC</artist>
@@ -17,7 +17,7 @@
             <time>238</time>
             <ruta>audios/have_a_drink_on_me.mp3</ruta>
         </song>   
-        <song id="3">
+        <song>
             <title>Shake A Leg</title>
             <genre>Rock</genre>
             <artist>AC/DC</artist>
@@ -25,7 +25,7 @@
             <time>245</time>
             <ruta>audios/shake_a_leg.mp3</ruta>
         </song>   
-        <song id="4">
+        <song>
             <title>Shoot To Thrill</title>
             <genre>Rock</genre>
             <artist>AC/DC</artist>

@@ -8,7 +8,7 @@ import javafx.util.Duration;
  * @author Cristòfol-Lluís Thwaite
  */
 public class Song {
-    
+
     private String title;
     private String genre;
     private String artist;
@@ -16,16 +16,16 @@ public class Song {
     private Duration time;
     private String timeFormat;
     private String songPath;
-    
+
     public Song() {
     }
 
     public Song(
-            String title, 
-            String genre, 
-            String artist, 
-            String album, 
-            Duration time, 
+            String title,
+            String genre,
+            String artist,
+            String album,
+            Duration time,
             String songPath
     ) {
         this.title = title;
@@ -76,7 +76,7 @@ public class Song {
     public void setTime(Duration time) {
         this.time = time;
     }
-    
+
     public String getTimeFormat() {
         return timeFormat;
     }
@@ -91,16 +91,16 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song{" + "title=" + title + ", genre=" + genre + ", artist=" 
-                + artist + ", album=" + album + ", time=" + time 
+        return "Song{" + "title=" + title + ", genre=" + genre + ", artist="
+                + artist + ", album=" + album + ", time=" + time
                 + ", songPath=" + songPath + '}';
     }
-    
+
     public static String formatDuration(Duration duration) {
         double seconds = duration.toSeconds();
         int mm = (int) (seconds % 3600) / 60;
         int ss = (int) seconds % 60;
         return String.format("%02d:%02d", mm, ss);
     }
-    
+
 }

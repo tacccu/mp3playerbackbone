@@ -3,16 +3,22 @@ package mp3player.controllers;
 
 import de.jensd.fx.glyphs.GlyphsDude;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
+import java.io.File;
 import java.net.URISyntaxException;
 import java.util.List;
 import javafx.beans.binding.Bindings;
+import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaPlayer.Status;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import mp3player.models.PlayList;
+import mp3player.models.PlayListJAXB;
 import mp3player.models.Song;
 import mp3player.views.MP3PlayerView;
 
@@ -43,6 +49,7 @@ public class MP3PlayerController {
         v.getTime().setCellValueFactory(new PropertyValueFactory<>("timeFormat"));
         PlayList p = new PlayList("All Songs", songList);
         v.getPlayListsList().getItems().add(p);
+        getDataFromXml();
         for (Song s : songList) {
             v.getTrackTable().getItems().add(s);
         }
@@ -116,4 +123,31 @@ public class MP3PlayerController {
             System.err.println();
         }
     }
+    
+    private void getDataFromXml() {
+        //TODO añadir los datos de las playlists del xml a java
+        try {
+            //JAVA bean context for Song class
+            JAXBContext context = JAXBContext.newInstance(Song.class);
+            //unmarshaller
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            
+            
+            Song s = (Song) unmarshaller.unmarshal(
+                    new File("src/main/resources/configuration/songs.xml")
+            );
+            System.out.println(s);
+            //PlayList p = new PlayList("All Songs", songList);
+            /*songList.forEach(i -> {
+                System.out.println(s);
+                //v.getTrackTable().getItems().add(s);
+            });*/
+        } catch (JAXBException ex) {
+            System.err.println(
+                    "Error amb el serialitzador JAXB: " + ex.getMessage()
+            );
+        }
+        //PlayList p = new PlayList("All Songs", songList);
+    }
+
 }
