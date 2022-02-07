@@ -34,7 +34,7 @@
             <ruta>audios/shoot_to_thrill.mp3</ruta>
         </song>
     </songs>
-    <paylists>
+<!--    <paylists>
         <playlist>
             <title>All Songs</title>
             <path>configuration/playlist_all_songs.json</path>
@@ -43,5 +43,5 @@
             <title>Other Songs</title>
             <path>configuration/playlist_other_songs.json</path>
         </playlist>   
-    </paylists>
+    </paylists>-->
 </reproductor>

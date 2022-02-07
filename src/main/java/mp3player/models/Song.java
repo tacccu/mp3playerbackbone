@@ -1,20 +1,33 @@
 
 package mp3player.models;
 
+import java.io.Serializable;
 import javafx.util.Duration;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement(name="song")
+@XmlAccessorType(XmlAccessType.NONE)
 /**
  *
  * @author Cristòfol-Lluís Thwaite
  */
-public class Song {
+public class Song implements Serializable{
 
+    @XmlElement
     private String title;
+    @XmlElement
     private String genre;
+    @XmlElement
     private String artist;
+    @XmlElement
     private String album;
+    @XmlElement
     private Duration time;
     private String timeFormat;
+    @XmlElement
     private String songPath;
 
     public Song() {

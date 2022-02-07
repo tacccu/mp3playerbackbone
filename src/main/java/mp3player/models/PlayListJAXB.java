@@ -5,6 +5,7 @@
  */
 package mp3player.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,17 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Ivan
  */
-public class PlayListJAXB {
+public class PlayListJAXB implements Serializable{
     @XmlElementWrapper(name="songs")
     @XmlElement(name="song")
     private List<Song> songList;
-    @XmlElementWrapper(name="playlists")
-    @XmlElement(name="playlist")
-    private Map<String, Song> playList;
+//    @XmlElementWrapper(name="playlists")
+//    @XmlElement(name="playlist")
+//    private Map<String, Song> playList;
 
     public PlayListJAXB() {
         songList = new ArrayList<>();
-        playList = new HashMap<>();
+//        playList = new HashMap<>();
     }
 
     public List<Song> getSongList() {
@@ -43,13 +44,13 @@ public class PlayListJAXB {
         this.songList = songList;
     }
 
-    public Map<String, Song> getPlayList() {
-        return playList;
-    }
-
-    public void setClients(Map<String, Song> playList) {
-        this.playList = playList;
-    }
+//    public Map<String, Song> getPlayList() {
+//        return playList;
+//    }
+//
+//    public void setClients(Map<String, Song> playList) {
+//        this.playList = playList;
+//    }
     
     public Song getSong(int i) {
         return songList.get(i);
