@@ -25,7 +25,7 @@ public class Song implements Serializable{
     @XmlElement
     private String album;
     @XmlElement
-    private Duration time;
+    private String time;
     private String timeFormat;
     @XmlElement
     private String songPath;
@@ -38,7 +38,7 @@ public class Song implements Serializable{
             String genre,
             String artist,
             String album,
-            Duration time,
+            String time,
             String songPath
     ) {
         this.title = title;
@@ -46,7 +46,7 @@ public class Song implements Serializable{
         this.artist = artist;
         this.album = album;
         this.time = time;
-        timeFormat = formatDuration(time);
+        timeFormat = formatDuration(timeParse(time));
         this.songPath = songPath;
     }
 
@@ -82,11 +82,11 @@ public class Song implements Serializable{
         this.album = album;
     }
 
-    public Duration getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Duration time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -109,6 +109,11 @@ public class Song implements Serializable{
                 + ", songPath=" + songPath + '}';
     }
 
+    //Metodo para pasar el time a String
+    public static Duration timeParse(String time) {
+        return Duration.valueOf(time);
+    }
+    
     public static String formatDuration(Duration duration) {
         double seconds = duration.toSeconds();
         int mm = (int) (seconds % 3600) / 60;
@@ -116,4 +121,5 @@ public class Song implements Serializable{
         return String.format("%02d:%02d", mm, ss);
     }
 
+    
 }

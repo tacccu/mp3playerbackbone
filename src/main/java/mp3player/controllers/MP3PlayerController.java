@@ -5,17 +5,13 @@ import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.beans.binding.Bindings;
-import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaPlayer.Status;
 import javafx.scene.media.MediaView;
 import javafx.util.Duration;
-import javax.xml.bind.JAXB;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -32,7 +28,7 @@ public class MP3PlayerController {
 
     private static final String SONG_FILE_NAME = "src/main/resources/configuration/songs.xml";
     private PlayListJAXB JAXB;
-    
+
     private MP3PlayerView v;
     private List<Song> songList;
     private Song currentTrack;
@@ -54,6 +50,8 @@ public class MP3PlayerController {
         v.getTime().setCellValueFactory(new PropertyValueFactory<>("timeFormat"));
         PlayList p = new PlayList("All Songs", songList);
         v.getPlayListsList().getItems().add(p);
+
+        songList = getDataFromXml(JAXB).getSongList();
         for (Song s : songList) {
             v.getTrackTable().getItems().add(s);
         }
@@ -65,8 +63,7 @@ public class MP3PlayerController {
         loadCurrentTrack();
         v.getAudioControls().getChildren().add(v.getMedia());
 
-        songList = getDataFromXml(JAXB).getSongList();
-
+        
     }
 
     public void initController() {
@@ -146,7 +143,7 @@ public class MP3PlayerController {
             System.err.println();
         }
     }
-    
+
     private static PlayListJAXB getDataFromXml(PlayListJAXB s) {
         //TODO añadir los datos de las playlists del xml a java
         try {
@@ -160,7 +157,7 @@ public class MP3PlayerController {
             System.out.println(s.getSongList());
 
             return s;
-            
+
         } catch (JAXBException ex) {
             System.err.println(
                     "Error amb el serialitzador JAXB: " + ex.getMessage()

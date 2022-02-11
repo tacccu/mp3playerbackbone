@@ -41,7 +41,7 @@ public class App extends Application {
                 "Rock",
                 "AC/DC",
                 "Back in Black",
-                Duration.seconds(311),
+                "311s",
                 "audios/hells_bells.mp3"
         );
         songList.add(s);

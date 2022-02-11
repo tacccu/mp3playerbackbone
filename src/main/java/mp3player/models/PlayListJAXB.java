@@ -27,13 +27,13 @@ public class PlayListJAXB implements Serializable{
     @XmlElementWrapper(name="songs")
     @XmlElement(name="song")
     private List<Song> songList;
-//    @XmlElementWrapper(name="playlists")
-//    @XmlElement(name="playlist")
-//    private Map<String, Song> playList;
+    @XmlElementWrapper(name="playlists")
+    @XmlElement(name="playlist")
+    private Map<String, Song> playList;
 
     public PlayListJAXB() {
         songList = new ArrayList<>();
-//        playList = new HashMap<>();
+        playList = new HashMap<>();
     }
 
     public List<Song> getSongList() {
@@ -44,13 +44,13 @@ public class PlayListJAXB implements Serializable{
         this.songList = songList;
     }
 
-//    public Map<String, Song> getPlayList() {
-//        return playList;
-//    }
-//
-//    public void setClients(Map<String, Song> playList) {
-//        this.playList = playList;
-//    }
+    public Map<String, Song> getPlayList() {
+        return playList;
+    }
+
+    public void setClients(Map<String, Song> playList) {
+        this.playList = playList;
+    }
     
     public Song getSong(int i) {
         return songList.get(i);
@@ -64,4 +64,10 @@ public class PlayListJAXB implements Serializable{
         return songList.remove(i);
     }
 
+    @Override
+    public String toString() {
+        return "PlayListJAXB{" + "songList=" + songList + '}';
+    }
+
+    
 }
