@@ -1,7 +1,21 @@
 {
-  "title": "Other Songs",
-  "songList": {
-        "id": 3,
-        "id": 4
-  }
+  "title": "All Songs",
+  "songList": [
+        {
+            "title":"Shake A Leg",
+            "genre":"Rock",
+            "artist":"AC/DC",
+            "album":"Back in Black",
+            "time":"245s",
+            "songPath":"audios/shake_a_leg.mp3"
+        },
+        {
+            "title":"Shoot To Thrill",
+            "genre":"Rock",
+            "artist":"AC/DC",
+            "album":"Back in Black",
+            "time":"320s",
+            "songPath":"audios/shoot_to_thrill.mp3"
+        }
+  ]
 }

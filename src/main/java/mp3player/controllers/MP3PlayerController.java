@@ -6,6 +6,7 @@ import java.io.File;
 import java.net.URISyntaxException;
 import java.util.List;
 import javafx.beans.binding.Bindings;
+import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -63,7 +64,6 @@ public class MP3PlayerController {
         loadCurrentTrack();
         v.getAudioControls().getChildren().add(v.getMedia());
 
-        
     }
 
     public void initController() {
@@ -98,6 +98,33 @@ public class MP3PlayerController {
             }
         });
 
+        v.getForward().setOnAction((ActionEvent event) -> {
+            if (player.getStatus() == Status.PLAYING) {
+                playPausePlayer();
+            }
+            trackPosInPlayList = trackPosInPlayList +1;
+            currentTrack = songList.get(trackPosInPlayList);
+            v.getCurrentTitle().setText(currentTrack.getTitle());
+            v.getCurrentArtist().setText(currentTrack.getArtist());
+            v.getTotalTime().setText(currentTrack.getTimeFormat());
+            loadCurrentTrack();
+            v.getAudioControls().getChildren().add(v.getMedia());
+            playPausePlayer();
+        });
+        
+        v.getBack().setOnAction((ActionEvent event) -> {
+            if (player.getStatus() == Status.PLAYING) {
+                playPausePlayer();
+            }
+            trackPosInPlayList = trackPosInPlayList -1;
+            currentTrack = songList.get(trackPosInPlayList);
+            v.getCurrentTitle().setText(currentTrack.getTitle());
+            v.getCurrentArtist().setText(currentTrack.getArtist());
+            v.getTotalTime().setText(currentTrack.getTimeFormat());
+            loadCurrentTrack();
+            v.getAudioControls().getChildren().add(v.getMedia());
+            playPausePlayer();
+        });
         /*
         https://blog.idrsolutions.com/2014/11/write-media-player-javafx-using-netbeans-ide-part-2/
         BACK BUTTON
